@@ -1,0 +1,17 @@
+server:
+  port: 8000
+
+web:
+  domain: http://localhost
+
+#spring:
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: root
+#    url: jdbc:mysql://localhost:3306/flowable?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true
+##    url: jdbc:mysql://localhost:3306/flowable?characterEncoding=UTF-8
+
+flowable:
+  async-executor-activate: false
+  database-schema-update: true
