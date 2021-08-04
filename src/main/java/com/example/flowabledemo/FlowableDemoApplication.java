@@ -1,5 +1,6 @@
 package com.example.flowabledemo;
 
+import com.example.flowabledemo.service.MyService;
 import org.flowable.engine.RepositoryService;
 import org.flowable.engine.RuntimeService;
 import org.flowable.engine.TaskService;
@@ -35,5 +36,22 @@ public class FlowableDemoApplication {
     //         }
     //     };
     // }
+
+
+    /**
+     * 建几个用户
+     * @param myService
+     * @return
+     */
+    @Bean
+    public CommandLineRunner init(final MyService myService) {
+
+        return new CommandLineRunner() {
+            @Override
+            public void run(String... strings) throws Exception {
+                myService.createDemoUsers();
+            }
+        };
+    }
 
 }
