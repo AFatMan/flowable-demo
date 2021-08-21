@@ -1,18 +1,17 @@
 package com.example.flowabledemo;
 
 import com.example.flowabledemo.service.MyService;
-import org.flowable.engine.RepositoryService;
-import org.flowable.engine.RuntimeService;
-import org.flowable.engine.TaskService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @author Liujs
  */
 @SpringBootApplication
+@EnableSwagger2
 public class FlowableDemoApplication {
 
     public static void main(String[] args) {
@@ -40,6 +39,7 @@ public class FlowableDemoApplication {
 
     /**
      * 建几个用户
+     *
      * @param myService
      * @return
      */
